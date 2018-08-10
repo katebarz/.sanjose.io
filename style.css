@@ -18,7 +18,10 @@ body {
 .navbar li {
     list-style: none;
 }
-
+.active-li{
+	background-color: white;
+	color: #03616a!important;
+}
 .navbar a {
     color: white;
     text-decoration: none;
@@ -139,8 +142,8 @@ body {
 .standings h2 {
     color: #03616a;
     text-align: center;
+    margin: 0;
 }
-
 .team h2:hover {
     text-decoration: none;
 }
@@ -202,15 +205,25 @@ body {
 .schedule h2 {
     text-align: center;
 }
-.schedule{
-	height:545px;
-	overflow-y: scroll;
+
+.schedule #showPrev, 
+.schedule #showNext{
+	width: 100%;
+	background-color: inherit;
+	border:none;
+}
+.schedule #showPrev:focus, 
+.schedule #showNext:focus{
+	outline:0;
+}
+.schedule #showPrev,
+.schedule #showNext{
+	font-size: 28px;	
 }
 #schedule-col table,
 #standings-col table {
     width: 100%;
     text-align: center;
-    margin-bottom: 20px;
 }
 
 #schedule-col table tr {
@@ -222,12 +235,23 @@ body {
     background-color: #027984;
 }
 
-/*#schedule-col table tr:nth-last-child(-n+72) {
-display: none;
-}*/
 .anchor {
     position: absolute;
     margin-top: -50px;
+}
+
+.standings button{
+	background-color: inherit;
+	border:none;
+	color:#03616a;
+}
+.standings-btn .btn:focus{
+	outline: 0 !important;
+	box-shadow: none;
+}
+.active-division h3{
+	border-bottom: 2px solid #03616a; 
+	padding:  0 0 10px 0;
 }
 
 #standings-col {
@@ -236,7 +260,7 @@ display: none;
     display: -ms-flexbox;
     display: flex;
     padding: 0;
-    overflow-x:auto;
+    
 }
 
 #schedule-col table tr,
@@ -258,7 +282,6 @@ display: none;
 	padding: 0 13px;
 	background: #f2f2f2;
 }
-
 
 
 @media (max-width: 767px) {
