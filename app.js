@@ -171,7 +171,6 @@ const games = getGamesFromApi()
 
 let indexX = 0
 let indexY = 0
-
 let showNextBtn = document.getElementById("showNext");
 showNextBtn.onclick = () => {
     if(indexY<82){
