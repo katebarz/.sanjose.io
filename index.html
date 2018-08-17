@@ -2,7 +2,9 @@
 <html>
 
 <head>
+    <meta charset="UTF-8">
     <title>San Jose Sharks</title>
+    <link rel="icon" href="images/logo.png" type="image/x-icon" />
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -17,12 +19,12 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#"><img src="images/logo.png"></a>
+            <a class="navbar-brand" href="#"><img src="images/logo.png" alt="sjs-logo"></a>
         </div>
         <div class="collapse navbar-collapse" id="navbar-main">
             <ul class="nav navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link active-li" href="#top">HOME</a>
+                    <a class="nav-link" href="#top">HOME</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#team">TEAM</a>
@@ -33,13 +35,15 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#standing">STANDINGS</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">CONTACT</a>
+                </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropbtn" onclick="dropdown()" role="button" data-toggle="dropdown">MORE<span class="glyphicon glyphicon-menu-down" id="span-menu"></span></a>
                     <div class="dropdown-content" id="dropdown-content">
-                        <a class="dropdown-item" href="#">Link 1</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Link 2</a>
-                        <a class="dropdown-item" href="#">Link 3</a>
+                        <a class="dropdown-item" href="https://www.nhl.com/sharks" target="_blank">NHL</a>
+                        <a class="dropdown-item" href="https://en.wikipedia.org/wiki/San_Jose_Sharks" target="_blank">Wiki</a>
+                        <a class="dropdown-item" href="https://twitter.com/sanjosesharks" target="_blank">Twitter</a>
                     </div>
                 </li>
             </ul>
@@ -47,48 +51,50 @@
     </nav>
     <a id="top" class="anchor"></a>
     <div class="content col-xs-12 col-sm-12 col-md-12 col-lg-12">
-        <ul id="slides">
-            <li class="slide showing"></li>
-            <li class="slide"></li>
-            <li class="slide"></li>
-            <li class="slide"></li>
-            <li class="slide"></li>
-        </ul>
+        <div class="slider">
+            <ul id="slides">
+                <li class="slide showing"></li>
+                <li class="slide"></li>
+                <li class="slide"></li>
+                <li class="slide"></li>
+                <li class="slide"></li>
+            </ul>
+        </div>
         <a id="team" class="anchor"></a>
         <div class="team container">
-            <h2>San Jose Sharks Team<img src="images/logo.png"></h2>
+            <h2>San Jose Sharks Team<img src="images/logo.png" alt="sjs-logo"></h2>
             <div class="row">
                 <div class="col-xs-6 col-sm-4 col-md-2 col-lg-2 col-xl-2 col-md-offset-2">
-                    <div class="ratio img-responsive img-circle" style="background-image: url(images/logan_couture.jpg);" alt="Logan Couture"></div>
+                    <div class="ratio img-responsive img-circle" style="background-image: url(images/logan_couture.jpg);"></div>
                     <h4><a href="https://en.wikipedia.org/wiki/Logan_Couture" target="_blank">Logan Couture</a></h4>
                 </div>
                 <div class="col-xs-6 col-sm-4 col-md-2 col-lg-2 col-xl-2">
-                    <div class="ratio img-responsive img-circle" style="background-image: url(images/thornton.png);" alt="Joe Thornton"></div>
+                    <div class="ratio img-responsive img-circle" style="background-image: url(images/thornton.png);"></div>
                     <h4><a href="https://pl.wikipedia.org/wiki/Joe_Thornton" target="_blank">Joe Thornton</a></h4>
                 </div>
                 <div class="col-xs-6 col-sm-4 col-md-2 col-lg-2 col-xl-2">
-                    <div class="ratio img-responsive img-circle" style="background-image: url(images/joonas_donskoi.jpg);" alt="Joonas Donskoi"></div>
+                    <div class="ratio img-responsive img-circle" style="background-image: url(images/joonas_donskoi.jpg);"></div>
                     <h4><a href="https://en.wikipedia.org/wiki/Joonas_Donskoi" target="_blank">Joonas Donskoi</a></h4>
                 </div>
                 <div class="col-xs-6 col-sm-4 col-md-2 col-lg-2 col-xl-2">
-                    <div class="ratio img-responsive img-circle" style="background-image: url(images/joe_pavelski.jpg);" alt="Joe Pavelski"></div>
+                    <div class="ratio img-responsive img-circle" style="background-image: url(images/joe_pavelski.jpg);"></div>
                     <h4 class="caption center-block"><a href="https://en.wikipedia.org/wiki/Joe_Pavelski" target="_blank">Joe Pavelski</a></h4>
                 </div>
                 <div class="col-md-2"></div>
                 <div class="col-xs-6 col-sm-4 col-md-2 col-lg-2 col-xl-2 col-md-offset-2">
-                    <div class="ratio img-responsive img-circle" style="background-image: url(images/brent_burns.jpg);" alt="Brent Burns"></div>
+                    <div class="ratio img-responsive img-circle" style="background-image: url(images/brent_burns.jpg);"></div>
                     <h4><a href="https://en.wikipedia.org/wiki/Brent_Burns" target="_blank">Brent Burns</a></h4>
                 </div>
                 <div class="col-xs-6 col-sm-4 col-md-2 col-lg-2 col-xl-2">
-                    <div class="ratio img-responsive img-circle" style="background-image: url(images/melker_karlsson.jpg);" alt="Melker Karlsson"></div>
+                    <div class="ratio img-responsive img-circle" style="background-image: url(images/melker_karlsson.jpg);"></div>
                     <h4><a href="https://en.wikipedia.org/wiki/Melker_Karlsson" target="_blank">Melker Karlsson</a></h4>
                 </div>
                 <div class="col-xs-6 col-sm-4 col-md-2 col-lg-2 col-xl-2">
-                    <div class="ratio img-responsive img-circle" style="background-image: url(images/evander_kane.jpg);" alt="Evander Kane"></div>
+                    <div class="ratio img-responsive img-circle" style="background-image: url(images/evander_kane.jpg);"></div>
                     <h4><a href="https://en.wikipedia.org/wiki/Evander_Kane" target="_blank">Evander Kane</a></h4>
                 </div>
                 <div class="col-xs-6 col-sm-4 col-md-2 col-lg-2 col-xl-2">
-                    <div class="ratio img-responsive img-circle" style="background-image: url(images/barclay_goodrow.jpg);" alt="Barclay Goodrow"></div>
+                    <div class="ratio img-responsive img-circle" style="background-image: url(images/barclay_goodrow.jpg);"></div>
                     <h4><a href="https://en.wikipedia.org/wiki/Barclay_Goodrow" target="_blank">Barclay Goodrow</a></h4>
                 </div>
                 <div class="col-md-2"></div>
@@ -96,7 +102,7 @@
         </div>
         <div class="schedule col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <a id="schedule" class="anchor"></a>
-            <h2>Schedule<img src="images/logo.png"></h2>
+            <h2>Schedule<img src="images/logo.png" alt="sjs-logo"></h2>
             <div class="col-md-1 col-md-offset-5">
                 <button id="showPrev"><span class="glyphicon glyphicon-menu-up"></span></button>
             </div>
@@ -107,7 +113,7 @@
         </div>
         <div class="standings col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <a id="standing" class="anchor"></a>
-            <h2>Division standings 2017/2018<img src="images/logo.png"></h2>
+            <h2>Division standings 2017/2018<img src="images/logo.png" alt="sjs-logo"></h2>
             <div id="standings-btn" class="standings-btn col-xs-12 col-sm-12 col-md-9 col-lg-9 col-md-offset-1">
                 <button id="metropolitan" class="btn active-division">
                     <h3>Metropolitan</h3></button>
@@ -121,7 +127,8 @@
             <div id="standings-col" class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-md-offset-1"></div>
         </div>
         <div class="contact col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <h2>Contact Form<img src="images/logo.png"></h2>
+            <a id="contact" class="anchor"></a>
+            <h2>Contact Form<img src="images/logo.png" alt="sjs-logo"></h2>
             <form action="" method="post">
                 <div class="row col-md-9 col-md-offset-1">
                     <div class="col-md-6">
@@ -133,13 +140,13 @@
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label for="first_name">Email</label>
+                            <label for="email">Email</label>
                             <input type="email" name="email" id="email" class="form-control" placeholder="Please enter your email" required="required" data-error="Email is required.">
                             <div class="help-block"></div>
                         </div>
                     </div>
                 </div>
-                <div class="row  col-md-9 col-md-offset-1">
+                <div class="row col-md-9 col-md-offset-1">
                     <div class="col-md-12">
                         <div class="form-group">
                             <label for="message">Firstname</label>
@@ -153,9 +160,11 @@
                         <input type="submit" class="btn btn-success btn-send" value="Send message">
                     </div>
                 </div>
+            </form>
+            <div class="col-md-12 footer">
+                <h5>&copy; 2018 Kateryna Barzakovska</h5>
+            </div>
         </div>
-        </form>
-        <div id="footer">FFFOOOTEEEERRRR</div>
     </div>
     <script src="app.js"></script>
 </body>
