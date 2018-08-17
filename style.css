@@ -17,17 +17,20 @@ body {
     text-decoration: none;
     padding: 15px; }
     .navbar a:hover {
-      background-color: white;
-      color: black;
+      background-color: white !important;
+      color: #03616a !important;
       text-decoration: none;
       transition: 0.5s all linear; }
   .navbar span {
     font-size: 10px;
     margin: 0 5px; }
+  .navbar .dropdown-item:hover {
+    background: #03616a !important;
+    color: white !important; }
 
-.active-li {
+.activeLink > a {
   background-color: white;
-  color: #03616a !important; }
+  color: black !important; }
 
 .navbar-toggle {
   border: 1px solid white; }
@@ -138,7 +141,8 @@ body {
   color: white;
   background-color: #03616a; }
   .schedule h2 {
-    text-align: center; }
+    text-align: center;
+    margin: 0; }
     .schedule h2 img {
       width: 60px;
       height: 60px;
@@ -163,6 +167,11 @@ body {
       height: 55px; }
       .schedule table tr:nth-child(2n) {
         background-color: #027984; }
+  .schedule .schedule-load {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70px; }
 
 .standings h2 {
   color: #03616a;
@@ -192,7 +201,8 @@ body {
 .standings button {
   background-color: inherit;
   border: none;
-  color: #03616a; }
+  color: #03616a;
+  font-size: 24px; }
 .standings .btn:focus {
   outline: 0 !important;
   box-shadow: none; }
@@ -215,10 +225,18 @@ body {
         transform: scale(1.1); }
   .contact label {
     color: white; }
+  .contact textarea {
+    resize: none; }
+
+.footer {
+  margin-top: 20px;
+  color: white;
+  border-top: 1px solid white;
+  text-align: center; }
 
 .anchor {
   position: absolute;
-  margin-top: -50px; }
+  margin-top: -80px; }
 
 @media (max-width: 767px) {
   .dropdown-content {
