@@ -1,57 +1,5 @@
 ///////////////////////////Active Menu Highlight/////////////////////
-/*let navDiv = document.getElementById("navbar-main");
-let links = navDiv.getElementsByClassName("nav-link");
-for (let i = 0; i < links.length; i++) {
-    links[i].addEventListener("click", function() {
-        event.preventDefault();
-        var id  = $(this).attr('href'),
-        top = $(id).offset().top;
-        console.log(top)
-        $('body,html').animate({scrollTop: top}, 1500);
-        let current = document.getElementsByClassName("active");
-        current[0].className = current[0].className.replace(" active", "");
-        this.className += " active";
-    });
-}
-*/
-// $(function(){
-
-/*    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
-        });
-    });*/
 $(window).on("load", () => {
-  /*$("a").on('click', function(event) {
-
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
-      // Prevent default anchor click behavior
-      event.preventDefault();
-
-      // Store hash
-      var hash = this.hash;
-
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 800, function(){
-
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
-      });
-    } 
-  });*/
-  window.scroll({
-  top: 2500, 
-  left: 0, 
-  behavior: 'smooth' 
-});
-
     $('.navbar-nav>li:nth-child(1)').addClass('activeLink');
     var topOffsetTop = $('.slider').offset().top;
     var teamOffsetTop = $('.team').offset().top;
@@ -59,7 +7,7 @@ $(window).on("load", () => {
     var standingOffsetTop = $('.standings').offset().top;
     var contactOffsetTop = $('.contact').offset().top;
     $(document).on('scroll', function() {
-        var scrollTop = (window.pageYOffset)+120;
+        var scrollTop = (window.pageYOffset) + 120;
         var activeLi;
         if (scrollTop < teamOffsetTop) {
             activeLi = $('.navbar-nav>li:nth-child(1)');
@@ -67,9 +15,9 @@ $(window).on("load", () => {
             activeLi = $('.navbar-nav>li:nth-child(2)');
         } else if (scrollTop > scheduleOffsetTop && scrollTop < standingOffsetTop) {
             activeLi = $('.navbar-nav>li:nth-child(3)');
-        } else if (scrollTop > standingOffsetTop && scrollTop < contactOffsetTop-350) {
+        } else if (scrollTop > standingOffsetTop && scrollTop < contactOffsetTop - 350) {
             activeLi = $('.navbar-nav>li:nth-child(4)');
-        } else if (scrollTop > contactOffsetTop-350) {
+        } else if (scrollTop > contactOffsetTop - 350) {
             activeLi = $('.navbar-nav>li:nth-child(5)');
         }
         activeLi.addClass(' activeLink')
